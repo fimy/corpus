@@ -14,7 +14,7 @@ corpus=nltk.Text(text_b)
 def form_example():
 	if request.method == 'POST':
 		term = request.form.get('term')
-		foo=len(corpus)
+		foo=corpus.similar('term')
 		
 		return '''<h1>The language value is: {}</h1>'''.format(foo)
 		
