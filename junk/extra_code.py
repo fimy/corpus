@@ -29,6 +29,5 @@ def json_example():
 			The item at index 0 in the example list is: {}
 			The boolean value is: {}'''.format(language, framework, python_version, example, boolean_test)
 	
-if __name__ == '__main__':
-	app1.run(debug=True, port=5000)
+
 	

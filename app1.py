@@ -19,16 +19,26 @@ def form_example():
 		ci = ConcordanceIndex(corpus.tokens)
 		results = concordance(ci, term)
 		
-		return '''<h1>The language value is: {}</h1>'''.format(results)
+		return '''<h1>The concordance result is:</h1>
+			<table>
+		        <tbody>
+		            <tr>
+		                <td width="420">{}</td>
+                    </tr>
+                </tbody>
+            </table>
+        <br>
+        Click <a href='/'>here</a> to try again'''.format(results)
 		
 	return '''<form method="POST">
 			This form contains the text of all <i>Los Angeles Times</i> articles containing the words "Filipino" or "Philippines" between January 1929 and June 1930. <br>
 			<br>
 			Enter your search term to find its concordance in the text corpus.<br>
+			<br>
 			Term: <input type="text" name="term"><br>
 			<input type="submit" value="Submit"><br>
 			<br>
-			This site uses NLTK and Flask.<br>
+			This site uses <a href="http://www.nltk.org">NLTK</a> and <a href="http://flask.pocoo.org">Flask</a>.<br>
 		</form>'''
 		
 if __name__ == '__main__':
